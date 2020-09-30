@@ -11,7 +11,10 @@ function createEmployeeRecords(arr){
   return result;
 }
 
-
+function createTimeInEvent(employee, time){
+  employee.timeInEvents.push({type:"TimeIn", date: time.split(" ")[0], hour: parseInt(time.split(" ")[1])});
+  return employee;
+}
 
 let allWagesFor = function () {
     let eligibleDates = this.timeInEvents.map(function (e) {
