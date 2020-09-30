@@ -21,6 +21,13 @@ function createTimeOutEvent(time){
   return this;
 }
 
+function hoursWorkedOnDate(date){
+  let hourstimein = parseInt(this.timeInEvents.find(element => element.date == date).hour)/100;
+  let hourstimeout = parseInt(this.timeOutEvents.find(element => element.date == date).hour)/100;
+  let hours = hourstimeout - hourstimein;
+  return hours;
+}
+
 let allWagesFor = function () {
     let eligibleDates = this.timeInEvents.map(function (e) {
         return e.date
