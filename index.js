@@ -11,7 +11,7 @@ function createEmployeeRecords(arr){
   return result;
 }
 
-function createTimeInEvent(employee, time){
+function createTimeInEvent(time){
   console.log(arguments);
   employee.timeInEvents.push({type:"TimeIn", date: time.split(" ")[0], hour: parseInt(time.split(" ")[1])});
   return employee;
