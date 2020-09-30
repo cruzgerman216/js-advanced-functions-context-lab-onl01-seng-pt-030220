@@ -28,13 +28,11 @@ function hoursWorkedOnDate(date){
   return hours;
 }
 
-function wagesEarnedOnDate( date){
-  console.log(this);
-  console.log("THIIIIIIIIIIIIIIIS");
-  console.log(hoursWorkedOnDate(date));
-  return this.payPerHour * hoursWorkedOnDate.call(this,date);
+let wagesEarnedOnDate = function(dateSought){
+    let rawWage = hoursWorkedOnDate.call(this, dateSought)
+        * this.payPerHour
+    return parseFloat(rawWage.toString())
 }
-
 
 let allWagesFor = function () {
     let eligibleDates = this.timeInEvents.map(function (e) {
