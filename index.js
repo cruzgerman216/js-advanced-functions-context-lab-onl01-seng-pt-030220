@@ -32,7 +32,7 @@ function wagesEarnedOnDate( date){
   console.log(this);
   console.log("THIIIIIIIIIIIIIIIS");
   console.log(hoursWorkedOnDate(date));
-  return this.payPerHour * hoursWorkedOnDate(date);
+  return this.payPerHour * hoursWorkedOnDate.call(this,date);
 }
 
 
