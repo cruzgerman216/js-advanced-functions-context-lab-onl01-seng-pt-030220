@@ -52,3 +52,9 @@ function calculatePayroll(arr){
   }
   return total;
 }
+
+function findEmployeeByFirstName(arr,name){
+  return arr.find(element=> element.firstName == name);
+}
+  return result;
+}
