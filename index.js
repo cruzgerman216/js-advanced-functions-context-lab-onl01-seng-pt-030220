@@ -44,3 +44,11 @@ let allWagesFor = function () {
 
     return payable
 }
+
+function calculatePayroll(arr){
+  let total = 0;
+  for(let i =0; i < arr.length; i++){
+    total += allWagesFor.call(arr[i])
+  }
+  return total;
+}
